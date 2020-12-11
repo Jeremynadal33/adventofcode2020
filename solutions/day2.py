@@ -19,7 +19,7 @@ for ind in range(data.shape[0]):
     
 data['check'] = check
 
-print('Total of valid passport for part 1 :',data['check'].sum())
+print('Total of valid passcodes for part 1 :',data['check'].sum())
 
 check = []
 for ind in range(data.shape[0]):
@@ -32,5 +32,5 @@ for ind in range(data.shape[0]):
                  and not (passcode[first_letter-1]==letter and passcode[second_letter-1]==letter ) )
 data['check'] = check
 
-print('Total of valid passport for part 2 :',data['check'].sum())
+print('Total of valid passcodes for part 2 :',data['check'].sum())
 
