@@ -1,11 +1,16 @@
 import pandas as pd
 
-data = pd.read_csv('input.txt',sep='\n',header=None)
+root_dir = '/Users/jeremynadal/Documents/adventofcode/adventofcode2020/'
+file_path = root_dir + 'inputs/input_1.txt'
+
+data = pd.read_csv(file_path,sep='\n',header=None)
 data.columns = ['raw']
 
+###### Seconde part ###### 
+
 for i in range(data.shape[0]):
-    for j in range(data.shape[0]):
-        for k in range(data.shape[0]):
+    for j in range(i, data.shape[0]):
+        for k in range(j, data.shape[0]):
             trois = data['raw'][k]
             oui = data['raw'][i]
             non = data['raw'][j]
